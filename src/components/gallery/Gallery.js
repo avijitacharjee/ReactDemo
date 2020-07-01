@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import '../../App.css';
+import GalleryView from './GalleryView';
 class Gallery extends React.Component {
     state={
         selectedFiles:null,
@@ -78,6 +79,9 @@ class Gallery extends React.Component {
                     <button onClick={this.onFileUpload}>Upload</button>
                 </div>
                 {this.fileData()}
+                <div>
+                    <GalleryView/>
+                </div>
             </div>
         );
     }
